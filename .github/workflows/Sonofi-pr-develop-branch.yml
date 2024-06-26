@@ -8,7 +8,7 @@ on:
       types: [opened, synchronize]
       # Run if the branch name is "develop"
       branches: [ develop ]
-      # Changes to the force-app directory only
+      # Changes to force-app directory only
       paths:
         - 'force-app/**'
             
