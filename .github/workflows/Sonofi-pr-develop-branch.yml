@@ -16,7 +16,7 @@ on:
 # Jobs execute when the above conditions are met
 jobs:
     # Name of the job
-    validate-deployment-on-develop-org: CI2_SFDX_DEPLOY_Check_Only
+    validate-deployment-on-develop-org:
         # Creates VM to run job on the latest version of ubuntu
         runs-on: ubuntu-latest
         if: ${{ github.actor != 'dependabot[bot]' }}
