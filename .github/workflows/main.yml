@@ -132,7 +132,7 @@ jobs:
 
             - name: 'Check-only deploy delta changes - run specified tests'
               run: |
-                  sf project deploy start --manifest manifest/package.xml --dry-run --test-level RunLocalTests
+                  sfdx force:source:deploy -x manifest/package.xml --checkonly --testlevel RunLocalTests  --json
 
             - name: 'Deploy destructive changes (if any)'
               run: sfdx force:mdapi:deploy -d "changed-sources/destructiveChanges" --checkonly --ignorewarnings 
