@@ -85,7 +85,7 @@ jobs:
 
             # Install SFDX scanner
             #- name: 'Installing SFDX scanner'
-             ## run: sfdx plugins:install @salesforce/sfdx-scanner
+            # ## run: sfdx plugins:install @salesforce/sfdx-scanner
 
             # Create a Github Secret
             # contains the sfdx url of the integration/qa org.
