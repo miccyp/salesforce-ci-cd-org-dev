@@ -32,7 +32,7 @@ jobs:
             # Install nodejs version 14 in the VM
             - uses: actions/setup-node@v3
               with:
-                node-version: '14'
+                node-version: '20'
 
             # Checks out source code (SFDX root directory)
             # Specify fetch-depth:0. Allows us to access previous commits
