@@ -27,6 +27,9 @@ jobs:
     validate-deployment-on-develop-org:
         # Creates VM to run job on the latest version of ubuntu
         runs-on: ubuntu-latest
+        permissions:
+          # required for all workflows
+          security-events: write
         if: ${{ github.actor != 'dependabot[bot]' }}
         steps:
             # Install nodejs version 20 in the VM
