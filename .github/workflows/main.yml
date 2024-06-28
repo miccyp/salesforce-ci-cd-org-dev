@@ -126,12 +126,10 @@ jobs:
               with:
                 sarif_file: changed-sources/apexScanResults.sarif
 
-            # We do a check-only deploy and we only run the tests specified in the PR
-            # If the env variable does not equal 'all', we know that there is a list of
-            # tests that can be run
+            # Deploy all components listed in a manifest
 
-            - name: 'Deploy all components listed in a manifest'
-              run: sfdx force:source:deploy -x manifest/package.xml
+            - name: 'Deploy package.xml'
+              run: sfdx force:source:deploy -x manifest/package.xml --ignorewarnings 
 
             - name: 'Deploy destructive changes (if any)'
-              run: sfdx force:mdapi:deploy -d "changed-sources/destructiveChanges" --checkonly --ignorewarnings 
+              run: sfdx force:mdapi:deploy -d "changed-sources/destructiveChanges" --ignorewarnings 
